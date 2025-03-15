@@ -1,10 +1,9 @@
-<div class="task-item flex" [class.completed]="task.isDone" [class.editing]="task.isEditing">
-    <div>
+<div class="task-item flex" [class.editing]="task.isEditing">
+    <div [class.completed]="task.isDone" >
         <span>{{task.title}}</span>
     </div>
-    @if (task.isEditing) {<div>
-        Currently editing...
-        </div>
+    @if (task.isEditing) {
+        <div class="currently-edit">Currently editing...</div>
     }
     <div>
         <button [disabled]="task.isEditing" (click)="editTask()">

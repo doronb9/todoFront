@@ -1,13 +1,21 @@
 .task-item {
     justify-content: space-between;
+    padding: 3px;
+    border: 1px #f9f9f9 solid;
+    border-radius: 5px;
+    margin-bottom: 5px;
     &:hover {
         background-color: #f9f9f9;
     }
-    &.completed {
-        text-decoration: line-through;
-    }
     &.editing {
         background-color: #f9f9f9;
+        
+    }
+    .completed {
+        text-decoration: line-through;
+    }
+    .currently-edit{
+        color: #005cbb;
     }
     button {
         background: none;
