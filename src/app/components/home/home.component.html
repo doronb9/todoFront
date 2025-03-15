@@ -1,0 +1,8 @@
+<div class="todos-container flex d-column items-center">
+    <app-header/>
+    <div class="tasks-body flex d-column items-center">
+        @for (item of tasks; track $index) {
+            <app-todo-item [task]="item"/>
+        }
+    </div>
+</div>

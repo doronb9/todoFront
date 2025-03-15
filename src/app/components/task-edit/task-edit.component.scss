@@ -1,0 +1,11 @@
+.task-dialog {
+    height: 100%;
+    overflow: hidden;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .todo-form-field {
+        width: 100%;
+    }
+}

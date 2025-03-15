@@ -1,0 +1,15 @@
+<div class="task-dialog">
+    <form action="" [formGroup]="taskForm">
+        <mat-form-field class="todo-form-field">
+            <mat-label>Task title</mat-label>
+            <input matInput formControlName="title">
+          </mat-form-field>
+          <mat-slide-toggle formControlName="isDone">Complete</mat-slide-toggle>
+    </form>
+    <div class="actions">
+        <mat-dialog-actions>
+            <button mat-dialog-close mat-button>Cancel</button>
+            <button [mat-dialog-close]="true" cdkFocusInitial mat-button color="primary" (click)="saveTask()">Save</button>
+        </mat-dialog-actions>
+    </div>
+</div>

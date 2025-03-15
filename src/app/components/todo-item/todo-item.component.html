@@ -1,0 +1,20 @@
+<div class="task-item flex" [class.completed]="task.isDone" [class.editing]="task.isEditing">
+    <div>
+        <span>{{task.title}}</span>
+    </div>
+    @if (task.isEditing) {<div>
+        Currently editing...
+        </div>
+    }
+    <div>
+        <button [disabled]="task.isEditing" (click)="editTask()">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button [disabled]="task.isEditing" (click)="deleteTask()">
+            <mat-icon>delete</mat-icon>
+        </button>
+        <button [disabled]="task.isEditing" (click)="completeTask()">
+            <mat-icon>check</mat-icon>
+        </button>
+    </div>
+</div>
